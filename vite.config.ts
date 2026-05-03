@@ -6,7 +6,7 @@ import {defineConfig, loadEnv} from 'vite';
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
   return {
-    base: './', // Đảm bảo đường dẫn tài nguyên (CSS, JS) hoạt động đúng trên GitHub Pages
+    base: '/dangkysachai/', // Cập nhật đúng với tên repository (tên miền phụ) trên GitHub
     plugins: [react(), tailwindcss()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
